@@ -6,5 +6,8 @@
 to_romain(n: int)-> str
 '''
 
--1-> 'I'
--2-> '
+- Test de unidades simples
+- Test de numeros que suman de mayor a menor
+
+Despues de la investigacion hemos decidido que un buen algoritmo es
+    1. Dividir el numero (siempre menor de 4000)
