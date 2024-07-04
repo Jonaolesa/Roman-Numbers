@@ -57,7 +57,27 @@ def digit_to_roman(lista):
         result += to_roman(item)
     return result
 
-    
+
 def arabigo_a_romano(n:int):
     lista = dividir_en_digitos(n)
     return digit_to_roman(lista)
+
+def divide_en_miles(n:int):
+    lista = []
+    modulo = n % 1000
+    paluego = n // 1000
+    while paluego >= 1000:
+        lista.append(modulo)
+        n = paluego
+        modulo = n % 1000
+        paluego = n // 1000 
+    
+    if paluego <= 3:
+        lista.append(n)
+    else:
+        lista.append(modulo)
+        lista.append(paluego)
+    return lista
+
+
+
