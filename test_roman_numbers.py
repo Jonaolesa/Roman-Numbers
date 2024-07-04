@@ -48,15 +48,5 @@ def test_divide_en_miles():
     assert divide_en_miles(3127) == [3127]
 
 def test_divide_en_miles_pero_con_millones():
-    assert test_divide_en_miles_pero_con_millones(4123234) == [234,123,4]
-    assert test_divide_en_miles_pero_con_millones(3123234) == [234,3123]
-
-
-
-
-
-
-
-
-
-    
+    assert divide_en_miles(4123234) == [234, 123, 4]
+    assert divide_en_miles(3123234) == [234, 3123]

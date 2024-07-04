@@ -78,6 +78,3 @@ def divide_en_miles(n:int):
         lista.append(modulo)
         lista.append(paluego)
     return lista
-
-
-
