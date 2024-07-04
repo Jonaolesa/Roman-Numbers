@@ -58,9 +58,20 @@ def digit_to_roman(lista):
     return result
 
 
-def arabigo_a_romano(n:int):
-    lista = dividir_en_digitos(n)
-    return digit_to_roman(lista)
+def arabigo_a_romano(n: int):
+    """
+    Transforma n (arabigo, entero positivo menor 4000) en romano bien formado
+    """
+    miles = divide_en_miles(n)
+    resultado = ""
+    for num_asteriscos, cifra in enumerate(miles):
+        lista = dividir_en_digitos(cifra)
+        romano = digit_to_roman(lista)
+        if romano != "":
+            romano += "*" * num_asteriscos
+        resultado = romano + resultado
+    
+    return resultado
 
 def divide_en_miles(n:int):
     lista = []
